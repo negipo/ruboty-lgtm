@@ -18,7 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+@ruboty lgtm <keyword> - Generate lgtm image matching with the keyword.
+```
 
 ## Contributing
 
