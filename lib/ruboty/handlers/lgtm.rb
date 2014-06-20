@@ -3,6 +3,8 @@ module Ruboty
     class Lgtm < Base
       on /lgtm( me)? ?(?<keyword>.+)?/, name: 'lgtm', description: 'Generate lgtm image matching with the keyword'
 
+      env :LGTM_ENDPOINT, "LGTM server endpoint (default: http://lgtm.herokuapp.com)", optional: true
+
       def lgtm(message = {})
         keyword = message[:keyword] || 'lgtm'
         url = generate(keyword)
@@ -15,7 +17,7 @@ module Ruboty
       private
 
       def generate(query)
-        Ruboty::Lgtm::Client.new(query: query).generate
+        Ruboty::Lgtm::Client.new(query: query, endpoint: ENV["LGTM_ENDPOINT"]).generate
       end
     end
   end

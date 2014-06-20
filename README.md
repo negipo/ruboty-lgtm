@@ -22,6 +22,11 @@ Or install it yourself as:
 @ruboty lgtm <keyword> - Generate lgtm image matching with the keyword.
 ```
 
+## ENV
+```
+LGTM_ENDPOINT - LGTM server endpoint (default: http://lgtm.herokuapp.com)
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/[my-github-username]/ruboty-lgtm/fork )

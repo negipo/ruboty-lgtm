@@ -4,6 +4,8 @@ require 'faraday_middleware'
 module Ruboty
   module Lgtm
     class Client
+      DEFAULT_ENDPOINT = 'http://lgtm.herokuapp.com'
+
       GOOGLE_IMAGE_API_URL = 'http://ajax.googleapis.com/ajax/services/search/images'
 
       def initialize(options)
@@ -14,7 +16,7 @@ module Ruboty
         url = get
 
         if url
-          "http://lgtm.herokuapp.com/#{url}"
+          File.join(endpoint, url)
         end
       end
 
@@ -74,6 +76,10 @@ module Ruboty
           connection.adapter :net_http
           connection.response :json
         end
+      end
+
+      def endpoint
+        @options[:endpoint] || DEFAULT_ENDPOINT
       end
     end
   end
