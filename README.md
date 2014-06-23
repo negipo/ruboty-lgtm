@@ -29,7 +29,7 @@ LGTM_ENDPOINT - LGTM server endpoint (default: http://lgtm.herokuapp.com)
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/ruboty-lgtm/fork )
+1. Fork it ( https://github.com/negipo/ruboty-lgtm/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
