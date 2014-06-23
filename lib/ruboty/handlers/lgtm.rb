@@ -1,12 +1,14 @@
 module Ruboty
   module Handlers
     class Lgtm < Base
+      DEFAULT_KEYWORD = 'yuyushiki'
+
       on /lgtm( me)? ?(?<keyword>.+)?/, name: 'lgtm', description: 'Generate lgtm image matching with the keyword'
 
       env :LGTM_ENDPOINT, "LGTM server endpoint (default: http://lgtm.herokuapp.com)", optional: true
 
       def lgtm(message = {})
-        keyword = message[:keyword] || 'lgtm'
+        keyword = message[:keyword] || DEFAULT_KEYWORD
         url = generate(keyword)
 
         if url
