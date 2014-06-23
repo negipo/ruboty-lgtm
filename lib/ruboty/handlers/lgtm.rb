@@ -13,6 +13,8 @@ module Ruboty
 
         if url
           message.reply(url)
+        else
+          message.reply('Could not find any lgtm images. Try another keyword.')
         end
       end
 
